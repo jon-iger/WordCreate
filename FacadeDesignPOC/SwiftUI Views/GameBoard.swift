@@ -13,10 +13,6 @@ struct GameBoard: View {
             ForEach(1..<6) { index in
                 GameRow(letterArray: ["A", "B", "C", "D", "E"])
             }
-            DoneSelect()
-                .padding(.top, 15)
-                .padding(.bottom, 15)
-            Clear()
         }
     }
 }

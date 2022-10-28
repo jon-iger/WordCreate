@@ -63,7 +63,6 @@
 			children = (
 				6BEE476C290C8C9500AEFBE1 /* SwiftUI Views */,
 				6B3787DB2909D0B900BF6B4D /* FacadeDesignPOCApp.swift */,
-				6B3787DD2909D0B900BF6B4D /* ContentView.swift */,
 				6B3787DF2909D0BB00BF6B4D /* Assets.xcassets */,
 				6B3787E12909D0BB00BF6B4D /* Preview Content */,
 			);
@@ -81,6 +80,7 @@
 		6BEE476C290C8C9500AEFBE1 /* SwiftUI Views */ = {
 			isa = PBXGroup;
 			children = (
+				6B3787DD2909D0B900BF6B4D /* ContentView.swift */,
 				6BEE4766290C83A900AEFBE1 /* GameSquare.swift */,
 				6BEE4768290C88F500AEFBE1 /* GameRow.swift */,
 				6BEE476A290C8AFE00AEFBE1 /* GameBoard.swift */,

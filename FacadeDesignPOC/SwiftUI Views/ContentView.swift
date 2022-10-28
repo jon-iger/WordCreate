@@ -9,7 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        GameBoard()
+        VStack(alignment: .center) {
+            GameBoard()
+            DoneSelect()
+                .padding(.top, 15)
+                .padding(.bottom, 15)
+            Clear()
+        }
     }
 }
 
