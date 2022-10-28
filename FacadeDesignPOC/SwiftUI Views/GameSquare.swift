@@ -10,15 +10,20 @@ import SwiftUI
 struct GameSquare: View {
     let blockLetter: String
     var body: some View {
-        ZStack(alignment: .center){
-            Rectangle()
-                .foregroundColor(.yellow)
-                .frame(width: 50, height: 50)
-                .border(.black)
-            Text(blockLetter)
-                .font(.title)
-                .foregroundColor(.black)
+        Button(action: squareTap) {
+            ZStack(alignment: .center){
+                Rectangle()
+                    .foregroundColor(.yellow)
+                    .frame(width: 50, height: 50)
+                    .border(.black)
+                Text(blockLetter)
+                    .font(.title)
+                    .foregroundColor(.black)
+            }
         }
+    }
+    func squareTap() {
+        print("Hi")
     }
 }
 
