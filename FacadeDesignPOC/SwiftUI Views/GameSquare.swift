@@ -9,21 +9,26 @@ import SwiftUI
 
 struct GameSquare: View {
     let blockLetter: String
+    @State var selected = false
+    @State var squareBackground = Color.yellow
+    @State var textBackground = Color.black
     var body: some View {
         Button(action: squareTap) {
             ZStack(alignment: .center){
                 Rectangle()
-                    .foregroundColor(.yellow)
+                    .foregroundColor(squareBackground)
                     .frame(width: 50, height: 50)
                     .border(.black)
                 Text(blockLetter)
                     .font(.title)
-                    .foregroundColor(.black)
+                    .foregroundColor(textBackground)
             }
         }
     }
     func squareTap() {
-        print("Hi")
+        selected.toggle()
+        squareBackground = selected ? .green : .yellow
+        textBackground = selected ? .white : .black
     }
 }
 

@@ -14,6 +14,8 @@
 		6BEE4767290C83A900AEFBE1 /* GameSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEE4766290C83A900AEFBE1 /* GameSquare.swift */; };
 		6BEE4769290C88F500AEFBE1 /* GameRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEE4768290C88F500AEFBE1 /* GameRow.swift */; };
 		6BEE476B290C8AFE00AEFBE1 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEE476A290C8AFE00AEFBE1 /* GameBoard.swift */; };
+		6BEE476E290C94E200AEFBE1 /* DoneSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEE476D290C94E200AEFBE1 /* DoneSelect.swift */; };
+		6BEE4770290C98E700AEFBE1 /* Clear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEE476F290C98E700AEFBE1 /* Clear.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		6BEE4766290C83A900AEFBE1 /* GameSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSquare.swift; sourceTree = "<group>"; };
 		6BEE4768290C88F500AEFBE1 /* GameRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRow.swift; sourceTree = "<group>"; };
 		6BEE476A290C8AFE00AEFBE1 /* GameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
+		6BEE476D290C94E200AEFBE1 /* DoneSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneSelect.swift; sourceTree = "<group>"; };
+		6BEE476F290C98E700AEFBE1 /* Clear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clear.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				6BEE4766290C83A900AEFBE1 /* GameSquare.swift */,
 				6BEE4768290C88F500AEFBE1 /* GameRow.swift */,
 				6BEE476A290C8AFE00AEFBE1 /* GameBoard.swift */,
+				6BEE476D290C94E200AEFBE1 /* DoneSelect.swift */,
+				6BEE476F290C98E700AEFBE1 /* Clear.swift */,
 			);
 			path = "SwiftUI Views";
 			sourceTree = "<group>";
@@ -157,6 +163,8 @@
 				6B3787DE2909D0B900BF6B4D /* ContentView.swift in Sources */,
 				6BEE4767290C83A900AEFBE1 /* GameSquare.swift in Sources */,
 				6BEE476B290C8AFE00AEFBE1 /* GameBoard.swift in Sources */,
+				6BEE476E290C94E200AEFBE1 /* DoneSelect.swift in Sources */,
+				6BEE4770290C98E700AEFBE1 /* Clear.swift in Sources */,
 				6BEE4769290C88F500AEFBE1 /* GameRow.swift in Sources */,
 				6B3787DC2909D0B900BF6B4D /* FacadeDesignPOCApp.swift in Sources */,
 			);
