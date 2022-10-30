@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var currentLetters: GameSettings
     var body: some View {
         VStack(alignment: .center) {
             GameBoard()
@@ -18,5 +19,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(GameSettings())
     }
 }

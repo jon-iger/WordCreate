@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GameSquare: View {
+    @EnvironmentObject var currentLetters: GameSettings
     let blockLetter: String
     @State var selected = false
     @State var squareBackground = Color.yellow
@@ -27,8 +28,10 @@ struct GameSquare: View {
     }
     func squareTap() {
         selected.toggle()
-        squareBackground = selected ? .green : .yellow
+        let selectionColor: Color = currentLetters.isPlayerOne ? .green : .blue
+        squareBackground = selected ? selectionColor : .yellow
         textBackground = selected ? .white : .black
+        self.currentLetters.selectedTurnLetters.append(blockLetter)
     }
 }
 

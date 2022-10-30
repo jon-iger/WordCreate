@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct FacadeDesignPOCApp: App {
+    var gameSettings = GameSettings()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(gameSettings)
         }
     }
 }

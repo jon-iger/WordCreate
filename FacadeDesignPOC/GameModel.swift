@@ -13,7 +13,8 @@ let supportedLanguages = ["English", "Spanish", "French", "German"]
 protocol GameModelProtocol {
     func clearWordBoard()
     func updatePointCount(newPlayerOnePoints: Int, newPlayerTwoPoints: Int)
-    func submitWords()
+    func submitPlayerOneWord(newWord: String)
+    func submitPlayerTwoWord(newWord: String)
     func gameRestart()
 }
 
@@ -52,8 +53,12 @@ class GameModel: GameModelProtocol {
         return ["A", "B", "C", "D", "E"]
     }
     
-    func submitWords() {
-        print("Placeholder")
+    func submitPlayerOneWord(newWord: String) {
+        playerOneWords.append(newWord)
+    }
+    
+    func submitPlayerTwoWord(newWord: String) {
+        playerTwoWords.append(newWord)
     }
     
     func gameRestart() {

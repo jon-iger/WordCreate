@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct GameBoard: View {
+    @EnvironmentObject var currentLetters: GameSettings
     var gameModel = GameModel()
     @State var letterArray: [String] = []
     @State var playerOne = true
     @State var currentText = "One"
+    @State var turnCount = 4
     var body: some View {
         VStack(alignment: .center) {
             Text("Current Player \(currentText)")
                 .font(.largeTitle)
-            Text("4 Turns Left")
+            Text("\(turnCount) Turns Left")
                 .font(.largeTitle)
                 .fontWeight(.bold)
             ForEach(1..<6) { index in
@@ -32,8 +34,19 @@ struct GameBoard: View {
             
             //Done Button
             Button(action: {
+                var newWord = String()
+                for letter in self.currentLetters.selectedTurnLetters {
+                    newWord.append(letter)
+                }
+                if playerOne {
+                    gameModel.submitPlayerOneWord(newWord: newWord)
+                } else {
+                    gameModel.submitPlayerTwoWord(newWord: newWord)
+                }
+                turnCount = !playerOne ? turnCount - 1 : turnCount
                 playerOne.toggle()
                 currentText = playerOne ? "One" : "Two"
+                self.currentLetters.isPlayerOne.toggle()
             }) {
                 Text("Turn Done")
                     .font(.title)
@@ -44,7 +57,7 @@ struct GameBoard: View {
                     .cornerRadius(15)
             }
             Button(action: {
-                gameModel.clearWordBoard()
+                currentLetters.selectedTurnLetters = []
             }) {
                 Text("Clear Selection")
                     .font(.title)
@@ -61,5 +74,6 @@ struct GameBoard: View {
 struct GameBoard_Previews: PreviewProvider {
     static var previews: some View {
         GameBoard(letterArray: ["A", "B", "C", "D", "E"])
+            .environmentObject(GameSettings())
     }
 }
