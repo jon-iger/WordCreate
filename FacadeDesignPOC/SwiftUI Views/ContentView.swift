@@ -11,10 +11,6 @@ struct ContentView: View {
     var body: some View {
         VStack(alignment: .center) {
             GameBoard()
-            DoneSelect()
-                .padding(.top, 15)
-                .padding(.bottom, 15)
-            Clear()
         }
     }
 }
