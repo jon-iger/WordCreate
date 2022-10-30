@@ -43,10 +43,15 @@ struct GameBoard: View {
                 } else {
                     gameModel.submitPlayerTwoWord(newWord: newWord)
                 }
-                turnCount = !playerOne ? turnCount - 1 : turnCount
-                playerOne.toggle()
-                currentText = playerOne ? "One" : "Two"
-                self.currentLetters.isPlayerOne.toggle()
+                
+                if turnCount == 0 {
+                    gameModel.submitWordsToOfficial()
+                } else {
+                    turnCount = !playerOne ? turnCount - 1 : turnCount
+                    playerOne.toggle()
+                    currentText = playerOne ? "One" : "Two"
+                    self.currentLetters.isPlayerOne.toggle()
+                }
             }) {
                 Text("Turn Done")
                     .font(.title)

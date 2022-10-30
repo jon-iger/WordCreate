@@ -7,14 +7,17 @@
 
 import Foundation
 
+// Global supporting variables
 let defaultStartingLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y"]
 let supportedLanguages = ["English", "Spanish", "French", "German"]
+let turnCount = 4
 
 protocol GameModelProtocol {
     func clearWordBoard()
     func updatePointCount(newPlayerOnePoints: Int, newPlayerTwoPoints: Int)
     func submitPlayerOneWord(newWord: String)
     func submitPlayerTwoWord(newWord: String)
+    func submitWordsToOfficial()
     func gameRestart()
 }
 
@@ -59,6 +62,10 @@ class GameModel: GameModelProtocol {
     
     func submitPlayerTwoWord(newWord: String) {
         playerTwoWords.append(newWord)
+    }
+    
+    func submitWordsToOfficial() {
+        print("Placeholder")
     }
     
     func gameRestart() {
