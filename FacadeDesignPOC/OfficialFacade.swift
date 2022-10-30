@@ -8,12 +8,7 @@
 import Foundation
 
 protocol GameOfficialFacadeProtocol {
-    func judgeSubmittedWords()
-    func addUpPointTotals()
-    func checkForWinner()
-    func pickNewLanguage()
-    func downloadNewLanguage()
-    func reorganizeGameBoard()
+    func judgeTheGame()
 }
 
 class GameOfficialFacade: GameOfficialFacadeProtocol {
@@ -23,27 +18,36 @@ class GameOfficialFacade: GameOfficialFacadeProtocol {
         self.gameModel = gameModel
     }
     
-    func judgeSubmittedWords() {
+    func judgeTheGame() {
+        judgeSubmittedWords()
+        addUpPointTotals()
+        checkForWinner()
+        pickNewLanguage()
+        downloadNewLanguage()
+        reorganizeGameBoard()
+    }
+    
+    private func judgeSubmittedWords() {
         print("Placeholder")
     }
     
-    func addUpPointTotals() {
+    private func addUpPointTotals() {
         print("Placeholder")
     }
     
-    func checkForWinner() {
+    private func checkForWinner() {
         print("Placeholder")
     }
     
-    func pickNewLanguage() {
+    private func pickNewLanguage() {
         print("Placeholder")
     }
     
-    func downloadNewLanguage() {
+    private func downloadNewLanguage() {
         print("Placeholder")
     }
     
-    func reorganizeGameBoard() {
+    private func reorganizeGameBoard() {
         print("Placeholder")
     }
 }
