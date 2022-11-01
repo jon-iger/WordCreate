@@ -13,7 +13,7 @@ struct GameBoard: View {
     @State var letterArray: [String] = []
     @State var playerOne = true
     @State var currentText = "One"
-    @State var turnCount = 4
+    @State var turnCount = 3
     var body: some View {
         VStack(alignment: .center) {
             Text("Current Player \(currentText)")
@@ -56,6 +56,7 @@ struct GameBoard: View {
             }
             Button(action: {
                 currentLetters.selectedTurnLetters = []
+                turnCount = 3
             }) {
                 Text("Clear Selection")
                     .font(.title)

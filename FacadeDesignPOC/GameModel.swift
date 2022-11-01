@@ -14,7 +14,6 @@ let turnCount = 4
 
 protocol GameModelProtocol {
     func clearWordBoard()
-    func updatePointCount(newPlayerOnePoints: Int, newPlayerTwoPoints: Int)
     func submitPlayerOneWord(newWord: String)
     func submitPlayerTwoWord(newWord: String)
     func submitWordsToOfficial()
@@ -24,36 +23,21 @@ protocol GameModelProtocol {
 class GameModel: GameModelProtocol {
     var playerOneWords: [String]
     var playerTwoWords: [String]
-    var playerOnePoints: Int
-    var playerTwoPoints: Int
-    var playerOneTurnCount: Int
-    var playerTwoTurnCount: Int
     var currentLanguage: String
     var boardLetters: [String]
+    var resultMessage: String
     
     init() {
         self.playerOneWords = []
         self.playerTwoWords = []
-        self.playerOnePoints = 0
-        self.playerTwoPoints = 0
-        self.playerOneTurnCount = 4
-        self.playerTwoTurnCount = 4
         self.currentLanguage = "English"
         self.boardLetters = defaultStartingLetters
+        self.resultMessage = String()
     }
     
     func clearWordBoard() {
         playerOneWords = []
         playerTwoWords = []
-    }
-    
-    func updatePointCount(newPlayerOnePoints: Int, newPlayerTwoPoints: Int) {
-        self.playerOnePoints += newPlayerOnePoints
-        self.playerTwoPoints += newPlayerTwoPoints
-    }
-    
-    func addNewWords() -> [String] {
-        return ["A", "B", "C", "D", "E"]
     }
     
     func submitPlayerOneWord(newWord: String) {
