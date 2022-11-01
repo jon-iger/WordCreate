@@ -21,15 +21,8 @@ struct GameBoard: View {
             Text("\(turnCount) Turns Left")
                 .font(.largeTitle)
                 .fontWeight(.bold)
-            ForEach(1..<6) { index in
-                GameRow(letterArray: letterArray)
-                    .task {
-                        letterArray = gameModel.addNewWords()
-                    }
-                    .refreshable {
-                        // need "await" keyword here??
-                        letterArray = gameModel.addNewWords()
-                    }
+            ForEach(0..<8) { index in
+                GameRow(modal: gameModel)
             }
             
             //Done Button

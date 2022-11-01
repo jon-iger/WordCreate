@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct GameRow: View {
-    let letterArray: [String]
+    let modal: GameModel
     var body: some View {
         HStack(alignment: .center) {
-            ForEach(letterArray, id: \.self) { block in
-                GameSquare(blockLetter: block)
+            ForEach(0..<6) { block in
+                GameSquare(gameModal: modal)
             }
         }
     }
@@ -20,6 +20,6 @@ struct GameRow: View {
 
 struct GameRow_Previews: PreviewProvider {
     static var previews: some View {
-        GameRow(letterArray: ["A", "B", "C", "D"])
+        GameRow(modal: GameModel())
     }
 }

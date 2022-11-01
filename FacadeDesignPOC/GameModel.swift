@@ -65,7 +65,8 @@ class GameModel: GameModelProtocol {
     }
     
     func submitWordsToOfficial() {
-        print("Placeholder")
+        let facade = GameOfficialFacade(gameModel: self)
+        facade.judgeTheGame()
     }
     
     func gameRestart() {

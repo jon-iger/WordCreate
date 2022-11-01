@@ -9,7 +9,8 @@ import SwiftUI
 
 struct GameSquare: View {
     @EnvironmentObject var currentLetters: GameSettings
-    let blockLetter: String
+    let gameModal: GameModel
+    @State var blockLetter = String()
     @State var selected = false
     @State var squareBackground = Color.yellow
     @State var textBackground = Color.black
@@ -23,6 +24,9 @@ struct GameSquare: View {
                 Text(blockLetter)
                     .font(.title)
                     .foregroundColor(textBackground)
+                    .task {
+                        blockLetter = getLetter()
+                    }
             }
         }
     }
@@ -33,10 +37,14 @@ struct GameSquare: View {
         textBackground = selected ? .white : .black
         self.currentLetters.selectedTurnLetters.append(blockLetter)
     }
+    
+    func getLetter() -> String {
+        return gameModal.boardLetters.shuffled()[0]
+    }
 }
 
 struct GameSquare_Previews: PreviewProvider {
     static var previews: some View {
-        GameSquare(blockLetter: "A")
+        GameSquare(gameModal: GameModel()).environmentObject(GameSettings())
     }
 }

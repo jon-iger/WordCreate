@@ -7,6 +7,8 @@
 
 import Foundation
 
+let apiKey = "22b91345146d319fa81856e84af973313d5708b4a0049f89d0917aa87bafadbc"
+
 protocol GameOfficialFacadeProtocol {
     func judgeTheGame()
 }
@@ -19,20 +21,28 @@ class GameOfficialFacade: GameOfficialFacadeProtocol {
     }
     
     func judgeTheGame() {
-        judgeSubmittedWords()
-        addUpPointTotals()
+        Task{
+            do {
+                try await judgeSubmittedWords()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
         checkForWinner()
         pickNewLanguage()
         downloadNewLanguage()
         reorganizeGameBoard()
     }
     
-    private func judgeSubmittedWords() {
-        print("Placeholder")
-    }
-    
-    private func addUpPointTotals() {
-        print("Placeholder")
+    private func judgeSubmittedWords() async throws {
+        let url = URL(string: "https://serpapi.com/search.json?q=Coffeee&hl=en&gl=us&api_key=\(apiKey)")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        let (data, response) = try await URLSession(configuration: .default).data(for: request)
+        let json = try JSONSerialization.jsonObject(with: data) as! [String:Any]
+        let subJson = json["search_information"] as! [String:Any]
+        let spelledWord = subJson["spelling_fix"] as! String
+        print(spelledWord)
     }
     
     private func checkForWinner() {
