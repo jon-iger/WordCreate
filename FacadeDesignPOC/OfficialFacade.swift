@@ -24,14 +24,14 @@ class GameOfficialFacade: GameOfficialFacadeProtocol {
         Task{
             do {
                 try await judgeSubmittedWords()
+                checkForWinner()
+                pickNewLanguage()
+                downloadNewLanguage()
+                reorganizeGameBoard()
             } catch {
                 print(error.localizedDescription)
             }
         }
-        checkForWinner()
-        pickNewLanguage()
-        downloadNewLanguage()
-        reorganizeGameBoard()
     }
     
     private func judgeSubmittedWords() async throws {
