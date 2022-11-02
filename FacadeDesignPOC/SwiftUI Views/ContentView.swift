@@ -19,6 +19,17 @@ struct ContentView: View {
             } catch {
                 print(error.localizedDescription)
             }
+            let myString = ""
+            guard let data = myString.data(using: .utf8) else {
+                print("Unable to convert string to data")
+                return
+            }
+            do {
+                try data.write(to: fileURL)
+                print("File saved: \(fileURL.absoluteURL)")
+            } catch {
+                print(error.localizedDescription)
+            }
         }
     }
 }

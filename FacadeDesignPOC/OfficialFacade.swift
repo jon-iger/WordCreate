@@ -51,7 +51,6 @@ class GameOfficialFacade: GameOfficialFacadeProtocol {
             let (data, response) = try await URLSession(configuration: .default).data(for: request)
             let json = try JSONSerialization.jsonObject(with: data) as! [String:Any]
             let subJson = json["search_information"] as! [String:Any]
-            // can return nil if given nonsense word??
             if let status = subJson["organic_results_state"] as? String {
                 if status == "Results for exact spelling" && playerNum == 1 {
                     playerOnePoints += word.count
@@ -72,12 +71,6 @@ class GameOfficialFacade: GameOfficialFacadeProtocol {
             self.gameModel.resultMessage = "On no! It's a tie"
         }
         print(self.gameModel.resultMessage)
-    }
-    
-    private func downloadNewBackground() {
-        
-        
-        
     }
     
     private func auditSubmittedWords(playerWords: [String], playerNum: Int) {
@@ -102,7 +95,6 @@ class GameOfficialFacade: GameOfficialFacadeProtocol {
     
     private func addRestrictedWords() {
         for restrictedWord in correctWords {
-            // Create data to be saved
             guard let data = restrictedWord.data(using: .utf8) else {
                 print("Cannot convert to Data. Returning from here.")
                 return
