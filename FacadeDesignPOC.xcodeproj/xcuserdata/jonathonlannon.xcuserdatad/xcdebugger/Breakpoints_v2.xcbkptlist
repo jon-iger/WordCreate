@@ -87,22 +87,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E7D4DFC6-C202-4DC1-83C2-16D9CF24948E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FacadeDesignPOC/OfficialFacade.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "checkForWinner()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "13639157-C095-4A3B-8F39-25049984E0DA"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -114,99 +98,6 @@
             endingLineNumber = "54"
             landmarkName = "submitWordsToOfficial()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F1E99320-BFD2-41B2-B94B-CA367DD9724B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FacadeDesignPOC/OfficialFacade.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "judgeSubmittedWords(playerWords:playerNum:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "F1E99320-BFD2-41B2-B94B-CA367DD9724B - 3e92766fde92778"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for FacadeDesignPOC.GameOfficialFacade.judgeSubmittedWords(playerWords: Swift.Array&lt;Swift.String&gt;, playerNum: Swift.Int) async throws -&gt; ()"
-                  moduleName = "FacadeDesignPOC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathonlannon/GitHub%20Desktop/FacadeDesignPOC/FacadeDesignPOC/OfficialFacade.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "1631">
-               </Location>
-               <Location
-                  uuid = "F1E99320-BFD2-41B2-B94B-CA367DD9724B - 18bdf29db9ad3974"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for FacadeDesignPOC.GameOfficialFacade.judgeSubmittedWords(playerWords: Swift.Array&lt;Swift.String&gt;, playerNum: Swift.Int) async throws -&gt; ()"
-                  moduleName = "FacadeDesignPOC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathonlannon/GitHub%20Desktop/FacadeDesignPOC/FacadeDesignPOC/OfficialFacade.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "51">
-               </Location>
-               <Location
-                  uuid = "F1E99320-BFD2-41B2-B94B-CA367DD9724B - ba36ceaf35b17b7e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for FacadeDesignPOC.GameOfficialFacade.judgeSubmittedWords(playerWords: Swift.Array&lt;Swift.String&gt;, playerNum: Swift.Int) async throws -&gt; ()"
-                  moduleName = "FacadeDesignPOC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathonlannon/GitHub%20Desktop/FacadeDesignPOC/FacadeDesignPOC/OfficialFacade.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "2277">
-               </Location>
-               <Location
-                  uuid = "F1E99320-BFD2-41B2-B94B-CA367DD9724B - 9612534e9ad5afb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for FacadeDesignPOC.GameOfficialFacade.judgeSubmittedWords(playerWords: Swift.Array&lt;Swift.String&gt;, playerNum: Swift.Int) async throws -&gt; ()"
-                  moduleName = "FacadeDesignPOC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathonlannon/GitHub%20Desktop/FacadeDesignPOC/FacadeDesignPOC/OfficialFacade.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "101">
-               </Location>
-               <Location
-                  uuid = "F1E99320-BFD2-41B2-B94B-CA367DD9724B - 9612534e9ad597f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for FacadeDesignPOC.GameOfficialFacade.judgeSubmittedWords(playerWords: Swift.Array&lt;Swift.String&gt;, playerNum: Swift.Int) async throws -&gt; ()"
-                  moduleName = "FacadeDesignPOC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathonlannon/GitHub%20Desktop/FacadeDesignPOC/FacadeDesignPOC/OfficialFacade.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "227">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -345,8 +236,8 @@
             filePath = "FacadeDesignPOC/OfficialFacade.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "judgeTheGame()"
             landmarkType = "7">
          </BreakpointContent>
@@ -361,40 +252,8 @@
             filePath = "FacadeDesignPOC/OfficialFacade.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "judgeSubmittedWords(playerWords:playerNum:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "64A104C9-5C28-4E95-885C-49FA61108463"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FacadeDesignPOC/OfficialFacade.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "judgeSubmittedWords(playerWords:playerNum:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C41A107F-AAEA-43BD-9633-8DE4CB84370F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FacadeDesignPOC/OfficialFacade.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "judgeSubmittedWords(playerWords:playerNum:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -409,8 +268,8 @@
             filePath = "FacadeDesignPOC/OfficialFacade.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "judgeSubmittedWords(playerWords:playerNum:)"
             landmarkType = "7">
             <Locations>
@@ -457,8 +316,8 @@
             filePath = "FacadeDesignPOC/OfficialFacade.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "judgeSubmittedWords(playerWords:playerNum:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -473,8 +332,8 @@
             filePath = "FacadeDesignPOC/OfficialFacade.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "judgeSubmittedWords(playerWords:playerNum:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -489,8 +348,8 @@
             filePath = "FacadeDesignPOC/OfficialFacade.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "judgeSubmittedWords(playerWords:playerNum:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -505,8 +364,8 @@
             filePath = "FacadeDesignPOC/OfficialFacade.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "judgeSubmittedWords(playerWords:playerNum:)"
             landmarkType = "7">
          </BreakpointContent>
