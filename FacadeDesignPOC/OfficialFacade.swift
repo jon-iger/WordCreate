@@ -8,9 +8,10 @@
 import Foundation
 
 let apiKey = "22b91345146d319fa81856e84af973313d5708b4a0049f89d0917aa87bafadbc"
+let imageNames = ["alphabet1", "alphabet2"]
 
 protocol GameOfficialFacadeProtocol {
-    func judgeTheGame()
+    func judgeTheGame() async throws
 }
 
 class GameOfficialFacade: GameOfficialFacadeProtocol {
@@ -24,19 +25,13 @@ class GameOfficialFacade: GameOfficialFacadeProtocol {
         self.playerTwoPoints = 0
     }
     
-    func judgeTheGame() {
-        Task{
-            do {
-                try await judgeSubmittedWords(playerWords: self.gameModel.playerOneWords, playerNum: 1)
-                try await judgeSubmittedWords(playerWords: self.gameModel.playerTwoWords, playerNum: 2)
-                checkForWinner()
-                pickNewLanguage()
-                downloadNewLanguage()
-                reorganizeGameBoard()
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
+    func judgeTheGame() async throws {
+        try await judgeSubmittedWords(playerWords: self.gameModel.playerOneWords, playerNum: 1)
+        try await judgeSubmittedWords(playerWords: self.gameModel.playerTwoWords, playerNum: 2)
+        checkForWinner()
+        pickNewLanguage()
+        downloadNewBackground()
+        reorganizeGameBoard()
     }
     
     private func judgeSubmittedWords(playerWords: [String], playerNum: Int) async throws {
@@ -47,12 +42,14 @@ class GameOfficialFacade: GameOfficialFacadeProtocol {
             let (data, response) = try await URLSession(configuration: .default).data(for: request)
             let json = try JSONSerialization.jsonObject(with: data) as! [String:Any]
             let subJson = json["search_information"] as! [String:Any]
-            let spelledWord = subJson["spelling_fix"] as! String
-            print(spelledWord)
-            if spelledWord == word && playerNum == 1 {
-                playerOnePoints += word.count
-            } else if spelledWord == word && playerNum == 2 {
-                playerTwoPoints += word.count
+            // can return nil if given nonsense word??
+            if let spelledWord = subJson["spelling_fix"] as? String {
+                print(spelledWord)
+                if spelledWord == word && playerNum == 1 {
+                    playerOnePoints += word.count
+                } else if spelledWord == word && playerNum == 2 {
+                    playerTwoPoints += word.count
+                }
             }
         }
     }
@@ -65,14 +62,15 @@ class GameOfficialFacade: GameOfficialFacadeProtocol {
         } else {
             self.gameModel.resultMessage = "On no! It's a tie"
         }
+        print(self.gameModel.resultMessage)
     }
     
     private func pickNewLanguage() {
         self.gameModel.currentLanguage = supportedLanguages.shuffled()[0]
     }
     
-    private func downloadNewLanguage() {
-        print("Placeholder")
+    private func downloadNewBackground() {
+        
     }
     
     private func reorganizeGameBoard() {

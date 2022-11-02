@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 // Global supporting variables
 let defaultStartingLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y"]
@@ -16,7 +17,7 @@ protocol GameModelProtocol {
     func clearWordBoard()
     func submitPlayerOneWord(newWord: String)
     func submitPlayerTwoWord(newWord: String)
-    func submitWordsToOfficial()
+    func submitWordsToOfficial() async throws
     func gameRestart()
 }
 
@@ -26,6 +27,8 @@ class GameModel: GameModelProtocol {
     var currentLanguage: String
     var boardLetters: [String]
     var resultMessage: String
+    var backgroundImage: UIImage!
+    var displayResultMessage: Bool
     
     init() {
         self.playerOneWords = []
@@ -33,6 +36,8 @@ class GameModel: GameModelProtocol {
         self.currentLanguage = "English"
         self.boardLetters = defaultStartingLetters
         self.resultMessage = String()
+        self.backgroundImage = nil
+        self.displayResultMessage = false
     }
     
     func clearWordBoard() {
@@ -48,9 +53,10 @@ class GameModel: GameModelProtocol {
         playerTwoWords.append(newWord)
     }
     
-    func submitWordsToOfficial() {
+    func submitWordsToOfficial() async throws {
         let facade = GameOfficialFacade(gameModel: self)
-        facade.judgeTheGame()
+        try await facade.judgeTheGame()
+        print("Judge complete")
     }
     
     func gameRestart() {

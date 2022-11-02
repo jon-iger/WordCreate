@@ -11,14 +11,17 @@ struct GameBoard: View {
     @EnvironmentObject var currentLetters: GameSettings
     var gameModel = GameModel()
     @State var letterArray: [String] = []
-    @State var playerOne = true
     @State var currentText = "One"
-    @State var turnCount = 3
+    @State var turnCount = 0
+    @State var turnDisplay = 3
+    @State var tapCount = 0
+    @State var displayMessage = String()
+    @State private var displayAlert = false
     var body: some View {
         VStack(alignment: .center) {
             Text("Current Player \(currentText)")
                 .font(.largeTitle)
-            Text("\(turnCount) Turns Left")
+            Text("\(turnDisplay) Turns Left")
                 .font(.largeTitle)
                 .fontWeight(.bold)
             ForEach(0..<8) { index in
@@ -27,23 +30,33 @@ struct GameBoard: View {
             
             //Done Button
             Button(action: {
+                tapCount += 1
                 var newWord = String()
                 for letter in self.currentLetters.selectedTurnLetters {
                     newWord.append(letter)
                 }
-                if playerOne {
+                if self.currentLetters.isPlayerOne {
                     gameModel.submitPlayerOneWord(newWord: newWord)
                 } else {
                     gameModel.submitPlayerTwoWord(newWord: newWord)
                 }
                 
-                if turnCount == 0 {
-                    gameModel.submitWordsToOfficial()
+                currentLetters.selectedTurnLetters = []
+                if tapCount == 2 {
+                    turnCount += 1
+                    turnDisplay -= 1
+                    tapCount = 0
+                }
+                if turnCount > 2 {
+                    turnDisplay = 0
+                    Task {
+                        try await gameModel.submitWordsToOfficial()
+                        displayMessage = gameModel.resultMessage
+                        displayAlert.toggle()
+                    }
                 } else {
-                    turnCount = !playerOne ? turnCount - 1 : turnCount
-                    playerOne.toggle()
-                    currentText = playerOne ? "One" : "Two"
                     self.currentLetters.isPlayerOne.toggle()
+                    currentText = self.currentLetters.isPlayerOne ? "One" : "Two"
                 }
             }) {
                 Text("Turn Done")
@@ -54,9 +67,13 @@ struct GameBoard: View {
                     .background(Color.blue)
                     .cornerRadius(15)
             }
+            .alert(isPresented: $displayAlert) {
+                Alert(title: Text("Game Over"), message: Text(displayMessage), dismissButton: .default(Text("OK")))
+            }
+            
             Button(action: {
                 currentLetters.selectedTurnLetters = []
-                turnCount = 3
+                turnCount = 0
             }) {
                 Text("Clear Selection")
                     .font(.title)
