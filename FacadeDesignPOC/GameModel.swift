@@ -25,16 +25,14 @@ class GameModel: GameModelProtocol {
     var resultMessage: String
     var backgroundImage: UIImage!
     var displayResultMessage: Bool
-    let currentDateTime: Date
     
-    init(currentDateTime: Date) {
+    init() {
         self.playerOneWords = []
         self.playerTwoWords = []
         self.boardLetters = defaultStartingLetters
         self.resultMessage = String()
         self.backgroundImage = nil
         self.displayResultMessage = false
-        self.currentDateTime = currentDateTime
     }
     
     func clearWordBoard() {

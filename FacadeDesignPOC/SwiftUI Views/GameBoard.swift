@@ -59,7 +59,6 @@ struct GameBoard: View {
                         gameModel.clearWordBoard()
                         turnDisplay = 3
                         tapCount = 0
-                        gameModel = GameModel(currentDateTime: gameSettings.currentDateTime ?? Date())
                     }
                 } else {
                     self.gameSettings.isPlayerOne.toggle()
