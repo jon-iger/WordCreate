@@ -45,6 +45,6 @@ struct GameSquare: View {
 
 struct GameSquare_Previews: PreviewProvider {
     static var previews: some View {
-        GameSquare(gameModal: GameModel(currentDateTime: Date())).environmentObject(GameSettings())
+        GameSquare(gameModal: GameModel()).environmentObject(GameSettings())
     }
 }

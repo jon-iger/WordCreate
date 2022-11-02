@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GameBoard: View {
     @EnvironmentObject var gameSettings: GameSettings
-    @State var gameModel = GameModel(currentDateTime: Date())
+    @State var gameModel = GameModel()
     @State var letterArray: [String] = []
     @State var currentText = "One"
     @State var turnCount = 0
@@ -26,9 +26,6 @@ struct GameBoard: View {
                 .fontWeight(.bold)
             ForEach(0..<8) { index in
                 GameRow(modal: gameModel)
-            }
-            .task {
-                gameSettings.currentDateTime = gameModel.currentDateTime
             }
             
             //Done Button

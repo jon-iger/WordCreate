@@ -48,7 +48,7 @@ class GameOfficialFacade: GameOfficialFacadeProtocol {
             let url = URL(string: "https://serpapi.com/search.json?q=\(word)&hl=en&gl=us&api_key=\(apiKey)")!
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
-            let (data, response) = try await URLSession(configuration: .default).data(for: request)
+            let (data, _) = try await URLSession(configuration: .default).data(for: request)
             let json = try JSONSerialization.jsonObject(with: data) as! [String:Any]
             let subJson = json["search_information"] as! [String:Any]
             if let status = subJson["organic_results_state"] as? String {
