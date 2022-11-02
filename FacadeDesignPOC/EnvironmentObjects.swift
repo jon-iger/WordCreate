@@ -10,4 +10,5 @@ import Foundation
 class GameSettings: ObservableObject {
     @Published var selectedTurnLetters: [String] = []
     @Published var isPlayerOne = true
+    @Published var currentDateTime: Date?
 }

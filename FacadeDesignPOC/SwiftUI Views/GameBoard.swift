@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct GameBoard: View {
-    @EnvironmentObject var currentLetters: GameSettings
-    var gameModel = GameModel()
+    @EnvironmentObject var gameSettings: GameSettings
+    @State var gameModel = GameModel(currentDateTime: Date())
     @State var letterArray: [String] = []
     @State var currentText = "One"
     @State var turnCount = 0
@@ -27,21 +27,24 @@ struct GameBoard: View {
             ForEach(0..<8) { index in
                 GameRow(modal: gameModel)
             }
+            .task {
+                gameSettings.currentDateTime = gameModel.currentDateTime
+            }
             
             //Done Button
             Button(action: {
                 tapCount += 1
                 var newWord = String()
-                for letter in self.currentLetters.selectedTurnLetters {
+                for letter in self.gameSettings.selectedTurnLetters {
                     newWord.append(letter)
                 }
-                if self.currentLetters.isPlayerOne {
-                    gameModel.submitPlayerOneWord(newWord: newWord)
+                if self.gameSettings.isPlayerOne {
+                    gameModel.submitPlayerOneWord(newWord: newWord.lowercased())
                 } else {
-                    gameModel.submitPlayerTwoWord(newWord: newWord)
+                    gameModel.submitPlayerTwoWord(newWord: newWord.lowercased())
                 }
                 
-                currentLetters.selectedTurnLetters = []
+                gameSettings.selectedTurnLetters = []
                 if tapCount == 2 {
                     turnCount += 1
                     turnDisplay -= 1
@@ -53,10 +56,14 @@ struct GameBoard: View {
                         try await gameModel.submitWordsToOfficial()
                         displayMessage = gameModel.resultMessage
                         displayAlert.toggle()
+                        gameModel.clearWordBoard()
+                        turnDisplay = 3
+                        tapCount = 0
+                        gameModel = GameModel(currentDateTime: gameSettings.currentDateTime ?? Date())
                     }
                 } else {
-                    self.currentLetters.isPlayerOne.toggle()
-                    currentText = self.currentLetters.isPlayerOne ? "One" : "Two"
+                    self.gameSettings.isPlayerOne.toggle()
+                    currentText = self.gameSettings.isPlayerOne ? "One" : "Two"
                 }
             }) {
                 Text("Turn Done")
@@ -72,7 +79,7 @@ struct GameBoard: View {
             }
             
             Button(action: {
-                currentLetters.selectedTurnLetters = []
+                gameSettings.selectedTurnLetters = []
                 turnCount = 0
             }) {
                 Text("Clear Selection")

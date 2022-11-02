@@ -29,7 +29,6 @@ class GameOfficialFacade: GameOfficialFacadeProtocol {
         try await judgeSubmittedWords(playerWords: self.gameModel.playerOneWords, playerNum: 1)
         try await judgeSubmittedWords(playerWords: self.gameModel.playerTwoWords, playerNum: 2)
         checkForWinner()
-        pickNewLanguage()
         downloadNewBackground()
         reorganizeGameBoard()
     }
@@ -43,11 +42,10 @@ class GameOfficialFacade: GameOfficialFacadeProtocol {
             let json = try JSONSerialization.jsonObject(with: data) as! [String:Any]
             let subJson = json["search_information"] as! [String:Any]
             // can return nil if given nonsense word??
-            if let spelledWord = subJson["spelling_fix"] as? String {
-                print(spelledWord)
-                if spelledWord == word && playerNum == 1 {
+            if let status = subJson["organic_results_state"] as? String {
+                if status == "Results for exact spelling" && playerNum == 1 {
                     playerOnePoints += word.count
-                } else if spelledWord == word && playerNum == 2 {
+                } else if status == "Results for exact spelling" && playerNum == 2 {
                     playerTwoPoints += word.count
                 }
             }
@@ -63,10 +61,6 @@ class GameOfficialFacade: GameOfficialFacadeProtocol {
             self.gameModel.resultMessage = "On no! It's a tie"
         }
         print(self.gameModel.resultMessage)
-    }
-    
-    private func pickNewLanguage() {
-        self.gameModel.currentLanguage = supportedLanguages.shuffled()[0]
     }
     
     private func downloadNewBackground() {
