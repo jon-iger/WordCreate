@@ -13,6 +13,13 @@ struct ContentView: View {
         VStack(alignment: .center) {
             GameBoard()
         }
+        .task {
+            do {
+                try FileManager.default.removeItem(at: fileURL)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 
