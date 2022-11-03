@@ -23,7 +23,6 @@ class GameModel: GameModelProtocol {
     var playerTwoWords: [String]
     var boardLetters: [String]
     var resultMessage: String
-    var backgroundImage: UIImage!
     var displayResultMessage: Bool
     
     init() {
@@ -31,7 +30,6 @@ class GameModel: GameModelProtocol {
         self.playerTwoWords = []
         self.boardLetters = defaultStartingLetters
         self.resultMessage = String()
-        self.backgroundImage = nil
         self.displayResultMessage = false
     }
     
