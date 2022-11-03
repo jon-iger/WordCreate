@@ -9,9 +9,7 @@
 import Foundation
 
 //global supporting variables
-let apiKey = "22b91345146d319fa81856e84af973313d5708b4a0049f89d0917aa87bafadbc"
-let directoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-let fileURL = URL(fileURLWithPath: "log", relativeTo: directoryURL).appendingPathExtension("txt")
+
 
 protocol GameOfficialFacadeProtocol {
     func judgeTheGame() async throws
@@ -139,7 +137,7 @@ class GameOfficialFacade: GameOfficialFacadeProtocol {
         for restrictedWord in correctWords {
             // amend string written to the file with "," for use when the file is being read later on
             let fileWord = restrictedWord + ","
-            guard let data = restrictedWord.data(using: .utf8) else {
+            guard let data = fileWord.data(using: .utf8) else {
                 print("Cannot convert to Data. Returning from here")
                 return
             }

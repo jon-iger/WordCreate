@@ -3,13 +3,11 @@
 //  FacadeDesignPOC
 //
 //  Created by Jonathon Lannon
-//  Holds our app's data model for a typical game, in addition to some global supporting variables
+//  Holds our app's data model for a typical game
 //
 
 import Foundation
 import UIKit
-
-let defaultStartingLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y"]
 
 /**
  GameModelProtocol: protocol for enabling GameModel functionality
@@ -48,7 +46,7 @@ class GameModel: GameModelProtocol {
     init() {
         self.playerOneWords = []
         self.playerTwoWords = []
-        self.boardLetters = defaultStartingLetters
+        self.boardLetters = startingLetters
         self.resultMessage = String()
     }
     

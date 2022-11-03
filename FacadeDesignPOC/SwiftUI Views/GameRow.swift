@@ -2,17 +2,18 @@
 //  GameRow.swift
 //  FacadeDesignPOC
 //
-//  Created by Jonathon Lannon on 10/28/22.
+//  Created by Jonathon Lannon
+//  File created to hold a single horizontal row of letter blocks to display
 //
 
 import SwiftUI
 
 struct GameRow: View {
-    let modal: GameModel
+    let modal: GameModel    // model taken as a parameter to be passed along to the block to be displayed on the board
     var body: some View {
         HStack(alignment: .center) {
             ForEach(0..<6) { block in
-                GameSquare(gameModal: modal)
+                GameSquare(gameModel: modal)
             }
         }
     }
