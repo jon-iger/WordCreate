@@ -8,27 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var currentLetters: GameSettings
+    @EnvironmentObject var gameSettings: GameSettings
+    @State var gameBoard: GameBoard = GameBoard()
     var body: some View {
-        VStack(alignment: .center) {
-            GameBoard()
-        }
-        .task {
-            do {
-                try FileManager.default.removeItem(at: fileURL)
-            } catch {
-                print(error.localizedDescription)
+        ZStack {
+            VStack(alignment: .center) {
+                gameBoard
             }
-            let myString = ""
-            guard let data = myString.data(using: .utf8) else {
-                print("Unable to convert string to data")
-                return
+            .task {
+                do {
+                    try FileManager.default.removeItem(at: fileURL)
+                } catch {
+                    print(error.localizedDescription)
+                }
+                let myString = ""
+                guard let data = myString.data(using: .utf8) else {
+                    print("Unable to convert string to data")
+                    return
+                }
+                do {
+                    try data.write(to: fileURL)
+                    print("File saved: \(fileURL.absoluteURL)")
+                } catch {
+                    print(error.localizedDescription)
+                }
             }
-            do {
-                try data.write(to: fileURL)
-                print("File saved: \(fileURL.absoluteURL)")
-            } catch {
-                print(error.localizedDescription)
+            if gameSettings.loading {
+                HiddenIndicator(hiddenStatus: !gameSettings.loading)
             }
         }
     }

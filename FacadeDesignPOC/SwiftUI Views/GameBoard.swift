@@ -49,13 +49,16 @@ struct GameBoard: View {
                 }
                 if turnCount > 2 {
                     turnDisplay = 0
+                    gameSettings.loading = true
                     Task {
                         try await gameModel.submitWordsToOfficial()
                         displayMessage = gameModel.resultMessage
+                        gameSettings.loading = false
                         displayAlert.toggle()
                         gameModel.clearWordBoard()
                         turnDisplay = 3
                         tapCount = 0
+                        self.gameSettings.gameOver.toggle()
                     }
                 } else {
                     self.gameSettings.isPlayerOne.toggle()
@@ -76,7 +79,13 @@ struct GameBoard: View {
             
             Button(action: {
                 gameSettings.selectedTurnLetters = []
+                gameSettings.gameOver.toggle()
+                gameModel.clearWordBoard()
+                turnDisplay = 3
+                gameSettings.isPlayerOne = true
                 turnCount = 0
+                currentText = self.gameSettings.isPlayerOne ? "One" : "Two"
+                tapCount = 0
             }) {
                 Text("Clear Selection")
                     .font(.title)

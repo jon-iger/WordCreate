@@ -29,6 +29,12 @@ struct GameSquare: View {
                     }
             }
         }
+        .task(id: currentLetters.gameOver) {
+            squareBackground = .yellow
+            textBackground = .black
+            blockLetter = getLetter()
+            selected = false
+        }
     }
     func squareTap() {
         selected.toggle()

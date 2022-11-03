@@ -10,4 +10,6 @@ import Foundation
 class GameSettings: ObservableObject {
     @Published var selectedTurnLetters: [String] = []
     @Published var isPlayerOne = true
+    @Published var gameOver = false
+    @Published var loading = false
 }

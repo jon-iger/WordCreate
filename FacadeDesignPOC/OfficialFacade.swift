@@ -39,7 +39,6 @@ class GameOfficialFacade: GameOfficialFacadeProtocol {
         try await judgeSubmittedWords(playerWords: auditedPlayerTwoWords, playerNum: 2)
         checkForWinner()
         addRestrictedWords()
-        reorganizeGameBoard()
     }
     
     private func judgeSubmittedWords(playerWords: [String], playerNum: Int) async throws {
@@ -106,9 +105,5 @@ class GameOfficialFacade: GameOfficialFacadeProtocol {
                 print(error.localizedDescription)
             }
         }
-    }
-    
-    private func reorganizeGameBoard() {
-        gameModel.boardLetters = gameModel.boardLetters.shuffled()
     }
 }
