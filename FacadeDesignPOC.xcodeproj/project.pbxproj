@@ -67,7 +67,6 @@
 			children = (
 				6BEE476C290C8C9500AEFBE1 /* SwiftUI Views */,
 				6B3787DB2909D0B900BF6B4D /* FacadeDesignPOCApp.swift */,
-				6B575F41291339320017D7AD /* ActivityIndicator.swift */,
 				6B662A08290EFAFF00CF8391 /* OfficialFacade.swift */,
 				6B662A0A290EFC9200CF8391 /* GameModel.swift */,
 				6B662A0C290F0DE600CF8391 /* EnvironmentObjects.swift */,
@@ -92,6 +91,7 @@
 				6BEE4766290C83A900AEFBE1 /* GameSquare.swift */,
 				6BEE4768290C88F500AEFBE1 /* GameRow.swift */,
 				6BEE476A290C8AFE00AEFBE1 /* GameBoard.swift */,
+				6B575F41291339320017D7AD /* ActivityIndicator.swift */,
 			);
 			path = "SwiftUI Views";
 			sourceTree = "<group>";

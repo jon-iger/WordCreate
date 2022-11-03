@@ -2,7 +2,8 @@
 //  FacadeDesignPOCApp.swift
 //  FacadeDesignPOC
 //
-//  Created by Jonathon Lannon on 10/26/22.
+//  Created by Jonathon Lannon
+//  Holds our main starting point
 //
 
 import SwiftUI
@@ -12,6 +13,7 @@ struct FacadeDesignPOCApp: App {
     var gameSettings = GameSettings()
     var body: some Scene {
         WindowGroup {
+            // attach a fresh copy of our EnvironmentObject to our instance of ContentView() for use in the app later on
             ContentView().environmentObject(gameSettings)
         }
     }

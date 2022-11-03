@@ -2,12 +2,15 @@
 //  ActivityIndicator.swift
 //  FacadeDesignPOC
 //
-//  Created by Jonathon Lannon on 11/2/22.
-//
+//  Created by Jonathon Lannon
+//  Holds the view for the app's activity indicator when appearing on screen
 
 import Foundation
 import SwiftUI
 
+/**
+ ActivityIndicator: UIKit view for our activity loading indicator
+ */
 struct ActivityIndicator: UIViewRepresentable {
     typealias UIViewType = UIActivityIndicatorView
     
@@ -22,6 +25,9 @@ struct ActivityIndicator: UIViewRepresentable {
     }
 }
 
+/**
+ HiddenIndicator: View: SwiftUI view for holding the app's loading icon plus text
+ */
 struct HiddenIndicator: View {
     var hiddenStatus: Bool
     @State var bindStatus: Bool = true
