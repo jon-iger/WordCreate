@@ -8,9 +8,9 @@
 
 import Foundation
 
-//global supporting variables
-
-
+/**
+ GameOfficialFacadeProtocol: protocol for our GameOfficialFacade object
+ */
 protocol GameOfficialFacadeProtocol {
     func judgeTheGame() async throws
 }
