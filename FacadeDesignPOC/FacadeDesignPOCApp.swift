@@ -9,7 +9,7 @@
 import SwiftUI
 
 // global supporting variables
-let apiKey = "22b91345146d319fa81856e84af973313d5708b4a0049f89d0917aa87bafadbc"
+let apiKey = "099784a80b57d7a110eb74594d4d625f7c6b68704fc0214a4555d4a63bf4efa0"     //serpAPI api key used with GitHub
 let directoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
 let fileURL = URL(fileURLWithPath: "log", relativeTo: directoryURL).appendingPathExtension("txt")
 let startingLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
