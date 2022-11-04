@@ -76,6 +76,7 @@ struct GameBoard: View {
                         tapCount = 0
                         // indicate that a single game is now in the game over status
                         self.gameSettings.gameOver.toggle()
+                        self.gameSettings.isPlayerOne = true
                         currentText = "One"
                     }
                 } else {
