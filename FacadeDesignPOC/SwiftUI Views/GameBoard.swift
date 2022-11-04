@@ -72,9 +72,11 @@ struct GameBoard: View {
                         gameModel.clearWordBoard()
                         // reset display values
                         turnDisplay = 3
+                        turnCount = 0
                         tapCount = 0
                         // indicate that a single game is now in the game over status
                         self.gameSettings.gameOver.toggle()
+                        currentText = "One"
                     }
                 } else {
                     // if the game is not over yet (amount of allowed turns has not been reached, allow the game to continue by adjusting on screen text/properties
