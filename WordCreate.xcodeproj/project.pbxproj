@@ -18,10 +18,11 @@
 		6BEE4767290C83A900AEFBE1 /* GameSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEE4766290C83A900AEFBE1 /* GameSquare.swift */; };
 		6BEE4769290C88F500AEFBE1 /* GameRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEE4768290C88F500AEFBE1 /* GameRow.swift */; };
 		6BEE476B290C8AFE00AEFBE1 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEE476A290C8AFE00AEFBE1 /* GameBoard.swift */; };
+		D4434C242C1721BC008BC399 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4434C232C1721BC008BC399 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6B3787D82909D0B900BF6B4D /* FacadeDesignPOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacadeDesignPOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B3787D82909D0B900BF6B4D /* WordCreate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordCreate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B3787DB2909D0B900BF6B4D /* FacadeDesignPOCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacadeDesignPOCApp.swift; sourceTree = "<group>"; };
 		6B3787DD2909D0B900BF6B4D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6B3787DF2909D0BB00BF6B4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,6 +34,7 @@
 		6BEE4766290C83A900AEFBE1 /* GameSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSquare.swift; sourceTree = "<group>"; };
 		6BEE4768290C88F500AEFBE1 /* GameRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRow.swift; sourceTree = "<group>"; };
 		6BEE476A290C8AFE00AEFBE1 /* GameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
+		D4434C232C1721BC008BC399 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,7 @@
 		6B3787D92909D0B900BF6B4D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6B3787D82909D0B900BF6B4D /* FacadeDesignPOC.app */,
+				6B3787D82909D0B900BF6B4D /* WordCreate.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +74,7 @@
 				6B662A0C290F0DE600CF8391 /* EnvironmentObjects.swift */,
 				6B3787DF2909D0BB00BF6B4D /* Assets.xcassets */,
 				6B3787E12909D0BB00BF6B4D /* Preview Content */,
+				D4434C232C1721BC008BC399 /* Launch Screen.storyboard */,
 			);
 			path = FacadeDesignPOC;
 			sourceTree = "<group>";
@@ -99,9 +102,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6B3787D72909D0B900BF6B4D /* FacadeDesignPOC */ = {
+		6B3787D72909D0B900BF6B4D /* WordCreate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6B3787E62909D0BB00BF6B4D /* Build configuration list for PBXNativeTarget "FacadeDesignPOC" */;
+			buildConfigurationList = 6B3787E62909D0BB00BF6B4D /* Build configuration list for PBXNativeTarget "WordCreate" */;
 			buildPhases = (
 				6B3787D42909D0B900BF6B4D /* Sources */,
 				6B3787D52909D0B900BF6B4D /* Frameworks */,
@@ -111,9 +114,9 @@
 			);
 			dependencies = (
 			);
-			name = FacadeDesignPOC;
+			name = WordCreate;
 			productName = FacadeDesignPOC;
-			productReference = 6B3787D82909D0B900BF6B4D /* FacadeDesignPOC.app */;
+			productReference = 6B3787D82909D0B900BF6B4D /* WordCreate.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -131,7 +134,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6B3787D32909D0B900BF6B4D /* Build configuration list for PBXProject "FacadeDesignPOC" */;
+			buildConfigurationList = 6B3787D32909D0B900BF6B4D /* Build configuration list for PBXProject "WordCreate" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -144,7 +147,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6B3787D72909D0B900BF6B4D /* FacadeDesignPOC */,
+				6B3787D72909D0B900BF6B4D /* WordCreate */,
 			);
 		};
 /* End PBXProject section */
@@ -154,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4434C242C1721BC008BC399 /* Launch Screen.storyboard in Resources */,
 				6B3787E32909D0BB00BF6B4D /* Preview Assets.xcassets in Resources */,
 				6B3787E02909D0BB00BF6B4D /* Assets.xcassets in Resources */,
 			);
@@ -315,6 +319,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -323,7 +328,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Jonathon-Lannon.FacadeDesignPOC";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jon-Iger.FacadeDesignPOC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -351,6 +356,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -359,7 +365,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Jonathon-Lannon.FacadeDesignPOC";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jon-Iger.FacadeDesignPOC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -374,7 +380,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6B3787D32909D0B900BF6B4D /* Build configuration list for PBXProject "FacadeDesignPOC" */ = {
+		6B3787D32909D0B900BF6B4D /* Build configuration list for PBXProject "WordCreate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6B3787E42909D0BB00BF6B4D /* Debug */,
@@ -383,7 +389,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6B3787E62909D0BB00BF6B4D /* Build configuration list for PBXNativeTarget "FacadeDesignPOC" */ = {
+		6B3787E62909D0BB00BF6B4D /* Build configuration list for PBXNativeTarget "WordCreate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6B3787E72909D0BB00BF6B4D /* Debug */,
