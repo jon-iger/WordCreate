@@ -7,3 +7,4 @@ WordCreate.xcodeproj/xcshareddata/xcschemes/WordCreate.xcscheme
 FacadeDesignPOC.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
 /FacadeDesignPOC.xcodeproj/xcuserdata
 .DS_Store
+FacadeDesignPOC/APIKeys.swift
