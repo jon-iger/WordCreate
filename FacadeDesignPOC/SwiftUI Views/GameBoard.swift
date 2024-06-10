@@ -21,8 +21,11 @@ struct GameBoard: View {
         VStack(alignment: .center) {
             Text("Current Player \(currentText)")
                 .font(.largeTitle)
+                .fontDesign(.serif)
+                .fontWeight(.bold)
             Text("\(turnDisplay) Turns Left")
                 .font(.largeTitle)
+                .fontDesign(.serif)
                 .fontWeight(.bold)
             ForEach(0..<8) { index in
                 GameRow(modal: gameModel)
@@ -85,8 +88,9 @@ struct GameBoard: View {
                     currentText = self.gameSettings.isPlayerOne ? "One" : "Two"
                 }
             }) {
-                Text("Turn Done")
+                Text("Finish Turn")
                     .font(.title)
+                    .fontDesign(.serif)
                     .frame(width: 160, height: 20)
                     .padding(15)
                     .foregroundColor(.white)
@@ -110,8 +114,9 @@ struct GameBoard: View {
                 currentText = self.gameSettings.isPlayerOne ? "One" : "Two"
                 tapCount = 0
             }) {
-                Text("Clear Selection")
+                Text("Clear Board")
                     .font(.title)
+                    .fontDesign(.serif)
                     .frame(width: 190, height: 20)
                     .padding(15)
                     .foregroundColor(.white)

@@ -1,9 +1,9 @@
 //
-//  OfficialFacade.swift
+//  GameJudgeFacade.swift
 //  FacadeDesignPOC
 //
 //  Created by Jon Iger
-//  Facade file for managing anything/everything that takes place after a game is completed by the user
+//  Facade file for managing anything/everything that takes place after a game is completed by the user, the "judge" of the game
 //
 
 import Foundation

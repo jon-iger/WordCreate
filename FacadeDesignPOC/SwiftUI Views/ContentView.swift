@@ -17,6 +17,11 @@ struct ContentView: View {
             VStack(alignment: .center) {
                 gameBoard
             }
+            .background{
+                Image("Background")
+                    .scaledToFit()
+                    .ignoresSafeArea(.all)
+            }
             .task {
                 // at the start of each game, delete the log file containing restricted words (if one exists)
                 // user is supposed to start wtih no restricted words everytime the app is opened/closed
