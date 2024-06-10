@@ -5,7 +5,4 @@ Have fun with friends making new words! Make as many words as possible in three 
 - App is built as a demo POC for the Facade design pattern done in Swift
 - Facade object "GameJudgeFacade" stores all objects and actions that can be done in the game such as judging the game, determining winners, and holding all of the player words in a single object
 
-![Simulator Screenshot - iPhone 15 Pro - 2024-06-10 at 05 19 27](https://github.com/jon-iger/WordCreate/assets/44842541/9249acb7-db8d-4755-99b0-23e69cc6ecdc)
-
-![Simulator Screenshot - iPhone 15 Pro - 2024-06-10 at 05 23 13](https://github.com/jon-iger/WordCreate/assets/44842541/8674a9b6-5d0b-48df-ba22-09df3eb97264)
-![Simulator Screenshot - iPhone 15 Pro - 2024-06-10 at 05 23 46](https://github.com/jon-iger/WordCreate/assets/44842541/e5977ddf-6182-421d-bd7f-311b33a97136)
+<img width="720" alt="Word Create Background Image" src="https://github.com/jon-iger/WordCreate/assets/44842541/1d25089e-5d0a-4eb3-8647-99e2291c6943">
