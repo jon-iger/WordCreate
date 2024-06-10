@@ -23,10 +23,12 @@ struct GameBoard: View {
                 .font(.largeTitle)
                 .fontDesign(.serif)
                 .fontWeight(.bold)
+                .foregroundStyle(.white)
             Text("\(turnDisplay) Turns Left")
                 .font(.largeTitle)
                 .fontDesign(.serif)
                 .fontWeight(.bold)
+                .foregroundStyle(.white)
             ForEach(0..<8) { index in
                 GameRow(modal: gameModel)
             }
