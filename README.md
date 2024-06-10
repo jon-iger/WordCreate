@@ -1,4 +1,2 @@
 # FacadeDesignPOC
-Design pattern presentation POC for IQVIA 2022 presentation
-
-Intended by used for personal/internal IQVIA purposes only for the completion of the 2022 employee "Development" goal
+Short experimental demo app showing off Facade Design pattern. The idea is to group similar things together to create one "Facade" where that group of objects can accessed in a unified manner. For example someone in a game would do actions such as checking who won, whether or not there were tiebreakers, check out words to make sure they're allowed to play in the game. Not meant to be distributed, just a sample project.
