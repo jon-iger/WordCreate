@@ -2,7 +2,7 @@
 //  GameRow.swift
 //  FacadeDesignPOC
 //
-//  Created by Jonathon Lannon
+//  Created by Jon Iger
 //  File created to hold a single horizontal row of letter blocks to display
 //
 

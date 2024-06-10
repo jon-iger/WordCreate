@@ -2,7 +2,7 @@
 //  GameModel.swift
 //  FacadeDesignPOC
 //
-//  Created by Jonathon Lannon
+//  Created by Jon Iger
 //  Holds our app's data model for a typical game
 //
 

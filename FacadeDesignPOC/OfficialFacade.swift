@@ -2,7 +2,7 @@
 //  OfficialFacade.swift
 //  FacadeDesignPOC
 //
-//  Created by Jonathon Lannon
+//  Created by Jon Iger
 //  Facade file for managing anything/everything that takes place after a game is completed by the user
 //
 

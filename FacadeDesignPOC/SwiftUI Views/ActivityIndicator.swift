@@ -2,7 +2,7 @@
 //  ActivityIndicator.swift
 //  FacadeDesignPOC
 //
-//  Created by Jonathon Lannon
+//  Created by Jon Iger
 //  Holds the view for the app's activity indicator when appearing on screen
 
 import Foundation

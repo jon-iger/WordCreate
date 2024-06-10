@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  FacadeDesignPOC
 //
-//  Created by Jonathon Lannon
+//  Created by Jon Iger
 //  File that holds our app's main content, and displays the game board to the user
 //
 

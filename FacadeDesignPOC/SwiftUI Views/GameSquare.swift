@@ -2,7 +2,7 @@
 //  GameSquare.swift
 //  FacadeDesignPOC
 //
-//  Created by Jonathon Lannon
+//  Created by Jon Iger
 //  File holding the SwiftUI view that represents a single individual square for our game
 //
 

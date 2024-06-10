@@ -2,7 +2,7 @@
 //  FacadeDesignPOCApp.swift
 //  FacadeDesignPOC
 //
-//  Created by Jonathon Lannon
+//  Created by Jon Iger
 //  Holds our main starting point, in addition to global variables and constants used throughout the app
 //
 

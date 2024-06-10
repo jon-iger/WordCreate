@@ -2,7 +2,7 @@
 //  GameBoard.swift
 //  FacadeDesignPOC
 //
-//  Created by Jonathon Lannon
+//  Created by Jon Iger
 //  File holding our "board" for the game (multiple rows made up of blocks plus functionality buttons)
 //
 

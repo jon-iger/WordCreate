@@ -2,7 +2,7 @@
 //  EnvironmentObjects.swift
 //  FacadeDesignPOC
 //
-//  Created by Jonathon Lannon
+//  Created by Jon Iger
 //  File for holding the app's EnvironmentObjects
 //
 
