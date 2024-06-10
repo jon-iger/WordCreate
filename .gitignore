@@ -7,10 +7,5 @@ WordCreate.xcodeproj/xcshareddata/xcschemes/WordCreate.xcscheme
 FacadeDesignPOC.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
 /FacadeDesignPOC.xcodeproj/xcuserdata
 .DS_Store
-FacadeDesignPOC/APIKeys.swift
-[main 75293cb] FacadeDesignPOC/APIKeys.swift
- 3 files changed, 34 insertions(+)
- create mode 100644 FacadeDesignPOC/APIKeys.swift
- create mode 100644 FacadeDesignPOC/WordCreate.swift
 WordCreate.xcodeproj/xcuserdata/joniger.xcuserdatad/xcschemes/xcschememanagement.plist
 FacadeDesignPOC/APIKeys.swift
