@@ -64,7 +64,7 @@ class GameOfficialFacade: GameOfficialFacadeProtocol {
     private func judgeSubmittedWords(playerWords: [String], playerNum: Int) async throws {
         for word in playerWords {
             // create the URL and our request
-            let url = URL(string: "https://serpapi.com/search.json?q=\(word)&hl=en&gl=us&api_key=\(apiKey)")!
+            let url = URL(string: "https://serpapi.com/search.json?q=\(word)&hl=en&gl=us&api_key=\(APIAccess.getAPIKey())")!
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
             
