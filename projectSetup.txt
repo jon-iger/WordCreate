@@ -1,9 +1,8 @@
-This project uses third party API services, and API Keys for this project to use are not distributed with this project. Follow these steps to set up the project:
+This project uses the third party API service SerpAPI. For security, contact the developer to receive the key to use this API. Then, follow these steps to set up the project:
 
-1. Contact the developer to receive a copy of APIKeys.swift, the source code file for holding API keys used in this app
-2. Open the Xcode project, and delete any existing file references in the project to APIKeys.swift
-3. If needed, open the project.pbxproj file and verify all file references to APIKeys.swift are removed before continuing
-4. Add the new file to the Xcode project under the VideoGameCollection group folder
-5. Project should now build successfully
+1. Open the Xcode project and create a new target with the WordCreate project
+2. Go the Edit Schemes menu for the target, and click on Run->Arguments
+3. Under the environment variables section, add this variable to the list:
+- Key: serpAPIKey, value: insert-API-key-here
 
 API keys should never be distributed without the written authorization of the developer
