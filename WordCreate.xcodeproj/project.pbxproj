@@ -17,9 +17,9 @@
 		6BEE4767290C83A900AEFBE1 /* GameSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEE4766290C83A900AEFBE1 /* GameSquare.swift */; };
 		6BEE4769290C88F500AEFBE1 /* GameRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEE4768290C88F500AEFBE1 /* GameRow.swift */; };
 		6BEE476B290C8AFE00AEFBE1 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEE476A290C8AFE00AEFBE1 /* GameBoard.swift */; };
+		D421C6602C1792CD00165918 /* APIAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = D421C65F2C1792CD00165918 /* APIAccess.swift */; };
 		D4434C242C1721BC008BC399 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4434C232C1721BC008BC399 /* Launch Screen.storyboard */; };
 		D47075E92C17559800F4C555 /* WordCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47075E82C17559800F4C555 /* WordCreate.swift */; };
-		D4C9459A2C175EDF005B0426 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C945992C175EDF005B0426 /* APIKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +34,9 @@
 		6BEE4766290C83A900AEFBE1 /* GameSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSquare.swift; sourceTree = "<group>"; };
 		6BEE4768290C88F500AEFBE1 /* GameRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRow.swift; sourceTree = "<group>"; };
 		6BEE476A290C8AFE00AEFBE1 /* GameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
+		D421C65F2C1792CD00165918 /* APIAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAccess.swift; sourceTree = "<group>"; };
 		D4434C232C1721BC008BC399 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D47075E82C17559800F4C555 /* WordCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordCreate.swift; sourceTree = "<group>"; };
-		D4C945992C175EDF005B0426 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,13 +71,13 @@
 			children = (
 				6BEE476C290C8C9500AEFBE1 /* SwiftUI Views */,
 				6B662A08290EFAFF00CF8391 /* GameJudgeFacade.swift */,
-				D4C945992C175EDF005B0426 /* APIKeys.swift */,
 				D47075E82C17559800F4C555 /* WordCreate.swift */,
 				6B662A0A290EFC9200CF8391 /* GameModel.swift */,
 				6B662A0C290F0DE600CF8391 /* EnvironmentObjects.swift */,
 				6B3787DF2909D0BB00BF6B4D /* Assets.xcassets */,
 				6B3787E12909D0BB00BF6B4D /* Preview Content */,
 				D4434C232C1721BC008BC399 /* Launch Screen.storyboard */,
+				D421C65F2C1792CD00165918 /* APIAccess.swift */,
 			);
 			path = FacadeDesignPOC;
 			sourceTree = "<group>";
@@ -179,7 +179,7 @@
 				6B662A0B290EFC9200CF8391 /* GameModel.swift in Sources */,
 				6BEE4767290C83A900AEFBE1 /* GameSquare.swift in Sources */,
 				6BEE476B290C8AFE00AEFBE1 /* GameBoard.swift in Sources */,
-				D4C9459A2C175EDF005B0426 /* APIKeys.swift in Sources */,
+				D421C6602C1792CD00165918 /* APIAccess.swift in Sources */,
 				6BEE4769290C88F500AEFBE1 /* GameRow.swift in Sources */,
 				D47075E92C17559800F4C555 /* WordCreate.swift in Sources */,
 				6B575F42291339320017D7AD /* ActivityIndicator.swift in Sources */,
